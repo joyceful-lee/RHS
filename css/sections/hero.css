@@ -1,0 +1,82 @@
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+
+@keyframes highlight {
+    to {
+        background-position: 0;
+    }
+}
+
+.wrapper {
+    height: 50vh;
+    display: grid;
+    margin-bottom: 200px;
+    place-items: center;
+}
+
+.typing-demo {
+    width: 25ch;
+    animation: typing 2s steps(25), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+}
+
+mark {
+    animation: highlight linear forwards;
+    animation-timeline: view(60% 20%);
+    background: linear-gradient(to right,
+            oklch(66.62% 0.1487 29.49 / 1) 50%,
+            oklch(66.62% 0.1487 29.49 / 0) 50%);
+    background-position: 100%;
+    background-size: 200% 100%;
+    border-radius: 0.125rem;
+    padding-inline: 0.125rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    color: oklch(66.62% 0.1487 29.49 / 1);
+    font-family: var(--work-sans);
+    font-size: 20px;
+    line-height: 1.45;
+}
+
+body {
+    margin: 0;
+}
+
+article {
+    display: grid;
+    min-height: 100svh;
+    place-items: center;
+    width: 100%;
+
+    & .content {
+        padding-block: 2rem 30svh;
+        width: min(600px, 90vw);
+    }
+}
+
+:is(h1, h2) {
+    margin: 0;
+    line-height: 1.1;
+}
+
+h2 {
+    margin-block-start: 2rem;
+}

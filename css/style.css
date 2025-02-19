@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url("sections/header.css");
+@import url("sections/footer.css");
+@import url("sections/timeline.css");
+@import url("sections/hero.css");
+
+:root {
+  --fugaz-one: "Fugaz One", serif;
+  --work-sans: "Work Sans", serif;
+  --montserrat: "Montserrat", serif;
+
+  /* THEME COLORS */
+  --dark-red: #8c1c13;
+  --burnt-grey: #a78a7f;
+  --muted-brown: #606364;
+  --deep-navy: #20262c;
+  --dark-blue: #4d7279;
+  --theme-blue: #2a5a63;
+
+
+  /* TIMELINE COLORS */
+  --red: #bf4342;
+  /*Government Restructuring & The Administrative State*/
+  --orange: #e09654;
+  /*Immigration & Border Security*/
+  --yellow: #e6cd73;
+  /*Economic & Regulatory Reform*/
+  --green: #adc178;
+  /*National Security & Foreign Policy Realignment*/
+  --blue: #336180;
+  /*Election Integrity & Voter Law Reforms*/
+  --purple: #5e548e;
+  /*Judiciary & Legal System Overhaul*/
+
+  /* SHADES */
+  --black: #000000;
+  --grey: #7a7a7a;
+  --white: #fff;
+  --cream: #e7ecef;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: var(--cream);
+}
+
+img.bg {
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 50%;
+  z-index: -2;
+}
+
+@media screen and (max-width: 1024px) {
+  img.bg {
+    left: 50%;
+    margin-left: -512px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
