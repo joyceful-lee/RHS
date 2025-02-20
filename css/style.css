@@ -4,6 +4,7 @@
 @import url("sections/footer.css");
 @import url("sections/timeline.css");
 @import url("sections/hero.css");
+@import url("sections/people.css");
 
 :root {
   --fugaz-one: "Fugaz One", serif;
@@ -51,6 +52,11 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   background-color: var(--cream);
+  min-height: 100vh;
+  display: grid;
+  align-content: center;
+  gap: 0;
+  padding: 2rem;
 }
 
 img.bg {
